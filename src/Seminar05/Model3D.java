@@ -1,0 +1,27 @@
+package Seminar05;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class Model3D implements Entity{
+    private static int counter = 10000;
+    private int id;
+    private Collection<Texture> textures = new ArrayList<>();
+
+    {
+       id = ++counter;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Collection<Texture> getTextures() {
+        return textures;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Model #%s", id);
+    }
+}
